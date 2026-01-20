@@ -1,0 +1,74 @@
+
+
+.flex{
+  display:flex;
+width:600vw;
+height:85vh;
+gap:25px;
+// margin:0 auto;
+//   justify-content: center;
+position:relative;
+align-items: center;
+justify-content: center;
+
+}
+.box{
+  position:relative;
+width:50vw ;
+height:85vh;
+text-align: center;
+overflow:hidden;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+.box img{
+position: absolute;
+top: 10%;
+
+width: 100%;
+height: 100%;
+object-fit: fill; /* 保持比例，裁切填滿 */
+// object-position: center; /* 置中顯示 */
+}
+.text{
+position: absolute; /* 絕對定位在 box 裡 */
+top: 1%; /* 垂直置中 */
+left: 40%;
+font-size:40px; font-style:bold;
+color:white;
+}
+
+
+.bus{
+  position:relative;
+  left:-50%;
+  top:7%;
+  // width: 100vw; height: 100vh;  position: relative;
+  // overflow:hidden;
+  // background-image: url("/page4-3.png");
+  // background-size: cover;
+
+
+animation: scrollx 18s linear infinite ;
+}
+
+// @keyframes scroll{
+//   // from { transform: scale(1); } to { transform: scale(1.3); }
+
+//   from { background-position: 0 0; } to { background-position:0 -2000px ; } /* 往上移動 */
+// }
+
+@keyframes scrollx { from { transform: translateX(25%); } to { transform: translateX(-500%); /* 向左移動 */ }
+
+
+}
+
+.bgg{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  background-image: url("/page4-3.png");
+  // background-size: cover;
+
+}

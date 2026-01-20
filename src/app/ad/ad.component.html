@@ -1,0 +1,41 @@
+<!-- @if (showanime==1) {} -->
+
+
+
+
+  <div [ngClass]="{'ad': showanime==1,'hidden': showanime==0 }">
+
+  <video autoplay muted playsinline [ngClass]="{'hidden': showanime==0 }">
+    <source src="/raiden.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bgg" (mousemove)="onMouseMove($event)">
+
+  <img #source src="/gd3.png" class="pic">
+
+</div>
+
+
+
+
+
+
+
+
+<div class="text">Forge a New Future <br> 開創新的時代</div>
+
+
+
+<div class="text2">---Shock the World </div>

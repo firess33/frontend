@@ -1,0 +1,296 @@
+
+
+
+
+
+
+<div class="bg">
+
+
+  <div class="toppic"> </div>
+
+<h1 style="position:relavite; margin-top:0vh">台南的天氣資料網站</h1>
+
+ <div class="sticky">
+      @for(x of location;track $index){
+      <button (click)="showtemperature($index)"> <h3> {{x}}</h3></button>
+      }
+</div>
+
+<!-- {{aa1}} bbbb
+{{aa2}} bbb
+{{aa3}} bbb
+{{aa4}} bbb
+{{aa5}}
+{{aa6}} -->
+
+
+
+
+<br>
+<br>
+
+<div class="flex">
+      @for(x of perhraa1;track $index;let i = $index){
+
+<div class="box" [class.alt]="$index % 2 == 1">
+
+      {{dtt[$index]}} :  <strong> {{x}} 度c</strong>
+
+</div>
+      }
+
+</div>
+
+
+
+<!--
+
+<div class="flex">
+      @for(x of perhraa12;track $index){
+
+<div class="box" [class.alt]="$index % 2 == 1">
+        {{dtt[$index]}} :{{x}} 度c
+</div>
+      }
+
+</div>
+
+
+
+
+<div class="flex">
+      @for(x of perhraa13;track $index){
+
+<div class="box" [class.alt]="$index % 2 == 1">
+        {{dtt[$index]}} :{{x}} 度c
+</div>
+      }
+
+</div> -->
+
+<div class="flex">
+   <div class="box3">
+       今日中午天氣概況 文字描述 :<br> {{perhraa6[0]}}  <br>
+            </div>
+
+             <div class="box3">
+       明日中午天氣概況 文字描述 :<br> {{perhraa6[0]}}  <br>
+            </div>
+
+             <div class="box3">
+       後天中午天氣概況 文字描述 :<br> {{perhraa6[0]}}  <br>
+            </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex">
+    @for(x of perhraa4;track $index){
+<div class="box" >
+         {{waterdtt[$index]}} : <strong>    {{x}}%降雨機率  </strong>
+        </div>
+      }
+</div>
+
+      <!-- @for(x of perhraa1;track $index){
+        {{x.ElementValue[0].Temperature}}
+      } -->
+      <!-- //溫度 -->
+<!--
+      @for(x of perhraa4;track $index){
+        {{x.ElementValue[0].Temperature}}%的降雨機率 <br>
+      } -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex">
+
+  <div class="flex2">
+<div class="sunny" >
+     <strong>   今日中午 體感溫度 {{perhraa3[0]}}  </strong>
+</div>
+<div class="sunny" >
+      <strong>   明日凌晨00:00 體感溫度 {{perhraa3[1]}}  </strong>
+</div>
+<div class="sunny" >
+      <strong>   明日中午 體感溫度 {{perhraa3[2]}}  </strong>
+</div>
+
+
+</div>
+
+
+
+  <div class="flex3">
+    <div class="box5" >
+       <strong> 今日中午 濕度:{{perhraa2[0]}}  </strong> <br>
+        </div>
+      <div class="box5" >
+       <strong> 今日晚上 濕度:{{perhraa2[1]}}  </strong> <br>
+        </div>
+
+      <div class="box5" >
+       <strong> 明日中午 濕度:{{perhraa2[2]}}  </strong> <br>
+        </div>
+      <div class="box5" >
+       <strong> 明日晚上 濕度:{{perhraa2[3]}}  </strong> <br>
+        </div>
+
+
+      <div class="box5" >
+       <strong> 後天中午 濕度:{{perhraa2[4]}}  </strong> <br>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!--
+
+  @for(x of perhraa2;track $index){
+        {{x}}濕度  <br>
+      }
+
+  @for(x of perhraa3;track $index){
+        體感溫度:{{x}}  <br>
+      }
+
+        @for(x of perhraa5;track $index){
+        天氣概況{{x}}  <br>
+      }
+
+
+
+
+      cccxxxxxxx
+      {{perhraa99}} -->
+
+
+
+
+
+<br>
+<h1>-- 台灣其他縣市的36小時溫度概況 -- @if(timetravel==1){  你已被傳送到{{travelprovincename}}!!!! }</h1>
+<br>
+
+
+<div class="flex" >
+
+
+
+      @for(x of provincearr;track $index){
+       <button (click)="show_province_temperature($index)"> <h2>  {{x}} </h2></button>
+      }
+</div>
+<br>
+<br>
+
+  <div class="bottompic">
+<h2>-- {{provincearr[province]}}-36小時的最低溫 --</h2>
+<div class="flex">
+<div class="box" style=width:20%>
+        <br>今日12:00~今日18:00 : <br> <strong> {{min[0]}} 度c</strong>
+</div>
+     <div class="box"  style=width:20% >
+       <br> 今日18:00~明日06:00 : <br> <strong> {{min[1]}} 度c</strong>
+</div>
+<div class="box"  style=width:20%>
+        <br>明日06:00~明日24:00 : <br>  <strong> {{min[2]}} 度c</strong>
+</div>
+</div>
+
+<h2>-- {{provincearr[province]}}-36小時的最高溫 --</h2>
+<div class="flex">
+<div class="box"  style=width:20% >
+        <br>今日12:00~18:00 : <br>  <strong> {{min[0]}} 度c</strong>
+</div>
+     <div class="box"  style=width:20%>
+       <br> 18:00~明日06:00 :<br> <strong> {{min[1]}} 度c</strong>
+</div>
+<div class="box"  style=width:20% >
+        <br>明日06:00~24:00 :  <br>  <strong> {{min[2]}} 度c</strong>
+</div>
+</div>
+
+
+  <!-- <div class="bottompic"> </div> -->
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="flex">
+
+<br>
+<br><br>
+
+<div class="circle " style="background-image:url('/z1.png'); background-size:cover;">
+<div class=" button b3 " (click)="gomain()">前往主頁main
+</div>
+</div>
+
+<div class="circle " style="background-image:url('/z2.png'); background-size:cover;">
+<div class="button" (click)="gotimetravel()">時空旅行
+</div>
+</div>
+
+<div class="circle " style="background-image:url('/gd3.png'); background-size:cover;">
+<div class="button" (click)="goad()">航向星辰大海 <br>浩瀚無垠
+</div>
+</div>
+
+
+<div class="circle " style="background-image:url('/z4.png'); background-size:cover;">
+<div class="button" (click)="gorocket()">Star Links /Space X<br>發射氣象衛星<br>組裝火箭
+</div>
+</div>
+
+
+<div class="circle " style="background-image:url('/z5.png'); background-size:cover;">
+<div class="button" (click)="gotour()">行星導覽
+</div>
+</div>
+
+<!--
+@if (showanime==1) { <app-ad></app-ad> } -->
+
+
+
+
+
+<!-- bbb
+<p style="margin-left: 15px;"> aaa </p>
+aaa -->
+
+</div>

@@ -1,0 +1,106 @@
+
+
+.bg{
+  min-height: 300vh;
+  // background: linear-gradient(#d8c398, #d5ae53);
+  background: #d8c398;
+
+}
+
+.flex{
+  display:flex;
+flex-wrap: wrap;
+width:88%;
+gap:3px;
+margin:0 auto;
+  justify-content: center;
+}
+.box{
+  background: #73a7ce;
+  position:relative;
+width:8% ;
+height:80px ;
+text-align: center;
+
+}
+.box.alt{
+  background: #90979c;
+
+}
+.box3{
+   display: flex;
+  background: #71b4cb;
+  position:relative;
+width:30%;
+height:180px ;
+text-align: center;
+align-items: center;
+margin:10px;
+
+}
+.flex3{
+  display:flex;
+flex-wrap: wrap;
+width:55%;
+gap:3px;
+margin:0 auto;
+
+}
+.flex2{
+//   display:flex;
+// flex-wrap: wrap;
+width:25%;
+gap:3px;
+margin-left:15%;
+
+}
+.box5{
+
+  background: #8d49d6;
+  position:relative;
+    margin:4px;
+width:45% ;
+height:80px ;
+text-align: center;
+
+}
+.sunny{
+  background: #ed8319;
+  position:relative;
+    margin:10px;
+width:75% ;
+height:80px ;
+text-align: center;
+
+}
+
+
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #333;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle:hover {
+  transform: scale(1.2);
+}
+
+.button{
+  width: 70px;
+  height: 50px;
+  background-color:#dae02d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button.circle:hover{
+  transform: scale(1.2);
+}
+
+
